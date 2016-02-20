@@ -1,0 +1,14 @@
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\Interop.WMPLib.dll
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\AxInterop.WMPLib.dll
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.csproj.ResolveComReference.cache
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Release\SchoolBellSystem.exe
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Release\SchoolBellSystem.pdb
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Release\LitJson.dll
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Release\Interop.WMPLib.dll
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Release\AxInterop.WMPLib.dll
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.AddBell.resources
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.MainForm.resources
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.Properties.Resources.resources
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.csproj.GenerateResource.Cache
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.exe
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.pdb
