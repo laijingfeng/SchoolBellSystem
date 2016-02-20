@@ -15,13 +15,18 @@ namespace SchoolBellSystem
         /// <summary>
         /// 星期
         /// </summary>
-        private string[] m_strWeekdays = { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
+        public static string[] m_strWeekdays = { "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日" };
+
+        /// <summary>
+        /// 星期
+        /// </summary>
+        public static string[] m_strWeekdaysShort = { "一", "二", "三", "四", "五", "六", "日" };
 
         /// <summary>
         /// 闹铃管理
         /// </summary>
         public static BellListMgr m_BellListMgr = null;
-        
+
         public MainForm()
         {
             InitializeComponent();
@@ -36,15 +41,17 @@ namespace SchoolBellSystem
         {
             Timer.Interval = 1000;
             Timer.Enabled = true;
-            LabelCurDateTime.Text = DateTime.Now.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " " + m_strWeekdays[Convert.ToInt32(DateTime.Now.DayOfWeek)];
+            LabelCurDateTime.Text = DateTime.Now.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " " + m_strWeekdays[(Convert.ToInt32(DateTime.Now.DayOfWeek) + 6) % 7];
 
             AxWindowsMediaPlayer.Visible = false;
 
-            if(m_BellListMgr == null)
+            if (m_BellListMgr == null)
             {
                 m_BellListMgr = new BellListMgr("Bell.txt");
                 m_BellListMgr.LoadData();
             }
+
+            RefreshBellUI();
 
             WindowAutoAdjust();
         }
@@ -130,10 +137,28 @@ namespace SchoolBellSystem
             this.Hide();
         }
 
-        private void Test(string name, int vol)
+        /// <summary>
+        /// 响铃
+        /// </summary>
+        /// <param name="bell"></param>
+        private void RingBell(Bell bell)
         {
-            AxWindowsMediaPlayer.URL = "Sound/" + name + ".mp3";
-            AxWindowsMediaPlayer.settings.volume = vol;
+            if (bell == null)
+            {
+                return;
+            }
+
+            if (bell.m_strRingDay.Equals("0000000"))
+            {
+                bell.m_bClosed = true;
+            }
+
+            m_BellListMgr.AddModifyBell(bell);
+
+            RefreshBellUI();
+
+            AxWindowsMediaPlayer.URL = "Sound/" + bell.m_strSoundName;
+            AxWindowsMediaPlayer.settings.volume = bell.m_iBellVolume;
         }
 
         /// <summary>
@@ -143,7 +168,11 @@ namespace SchoolBellSystem
         /// <param name="e"></param>
         private void Timer_Tick(object sender, EventArgs e)
         {
-            LabelCurDateTime.Text = DateTime.Now.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " " + m_strWeekdays[Convert.ToInt32(DateTime.Now.DayOfWeek)];
+            DateTime time = DateTime.Now;
+
+            LabelCurDateTime.Text = time.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " " + m_strWeekdays[(Convert.ToInt32(time.DayOfWeek) + 6) % 7];
+
+            RingBell(m_BellListMgr.TryRingBell(time));
         }
 
         /// <summary>
@@ -175,7 +204,73 @@ namespace SchoolBellSystem
         /// </summary>
         private void RefreshBellUI()
         {
+            m_BellListMgr.Sort();
 
+            DGV.Columns.Clear();
+            DGV.Columns.Add("BellName", "名称"); DGV.Columns[0].Width = 140;
+            DGV.Columns.Add("RingTime", "时间"); DGV.Columns[1].Width = 55;
+            DGV.Columns.Add("RingDay", "重复"); DGV.Columns[2].Width = 140;
+            DGV.Columns.Add("SoundName", "铃声");
+            DGV.Columns.Add("Volume", "音量"); DGV.Columns[4].Width = 35;
+            DGV.Columns.Add("State", "状态"); DGV.Columns[5].Width = 55;
+
+            if (m_BellListMgr.m_listBell.Count <= 0)
+            {
+                return;
+            }
+
+            DGV.Rows.Clear();
+            DGV.Rows.Add(m_BellListMgr.m_listBell.Count);
+
+            Bell bell;
+            for (int i = 0, imax = m_BellListMgr.m_listBell.Count; i < imax; i++)
+            {
+                bell = m_BellListMgr.m_listBell[i];
+                DGV.Rows[i].Cells[0].Value = bell.m_strBellName;
+                DGV.Rows[i].Cells[1].Value = bell.m_strRingTime;
+
+                string days = "只响一次";
+                if (bell.m_strRingDay.Equals("0000000") == false)
+                {
+                    days = "";
+                    for (int j = 0, jmax = bell.m_strRingDay.Length; j < jmax; j++)
+                    {
+                        if (bell.m_strRingDay[j] == '1')
+                        {
+                            if (string.IsNullOrEmpty(days) == false)
+                            {
+                                days += '|';
+                            }
+                            else
+                            {
+                                days += "周";
+                            }
+                            days += m_strWeekdaysShort[j];
+                        }
+                    }
+                }
+                DGV.Rows[i].Cells[2].Value = days;
+
+                DGV.Rows[i].Cells[3].Value = bell.m_strSoundName;
+                DGV.Rows[i].Cells[4].Value = bell.m_iBellVolume;
+                DGV.Rows[i].Cells[5].Value = bell.m_bClosed ? "关闭" : "开启";
+            }
+        }
+
+        /// <summary>
+        /// 双击行头
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DGV_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= m_BellListMgr.m_listBell.Count
+                || e.RowIndex < 0)
+            {
+                return;
+            }
+
+            DoAddModifyBell(m_BellListMgr.m_listBell[e.RowIndex].m_iBellID);
         }
 
         #region 窗体缩放调整

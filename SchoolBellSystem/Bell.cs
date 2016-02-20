@@ -38,7 +38,12 @@ namespace SchoolBellSystem
         /// <summary>
         /// 响应的天
         /// </summary>
-        public int m_iRingDay;
+        public string m_strRingDay;
+
+        /// <summary>
+        /// 已关闭
+        /// </summary>
+        public bool m_bClosed;
 
         /// <summary>
         /// 构造
@@ -57,9 +62,10 @@ namespace SchoolBellSystem
             m_iBellID = bellID;
             m_strBellName = "";
             m_strSoundName = "";
-            m_iBellVolume = 0;
+            m_iBellVolume = 100;
             m_strRingTime = "";
-            m_iRingDay = 0;
+            m_strRingDay = "0000000";
+            m_bClosed = false;
         }
 
         /// <summary>
@@ -71,14 +77,15 @@ namespace SchoolBellSystem
         /// <param name="ringTime">响应时间</param>
         /// <param name="ringDay">响应的天</param>
         /// <param name="bellID">编号</param>
-        public Bell(string bellName, string soundName, int bellVolume, string ringTime, int ringDay, int bellID)
+        public Bell(string bellName, string soundName, int bellVolume, string ringTime, string ringDay, int bellID)
         {
             m_strBellName = bellName;
             m_strSoundName = soundName;
             m_iBellVolume = bellVolume;
             m_strRingTime = ringTime;
-            m_iRingDay = ringDay;
+            m_strRingDay = ringDay;
             m_iBellID = bellID;
+            m_bClosed = false;
         }
 
         /// <summary>

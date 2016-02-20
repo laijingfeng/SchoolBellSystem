@@ -24,7 +24,7 @@ namespace SchoolBellSystem
         /// <summary>
         /// 文件名
         /// </summary>
-        public string m_strFileName;
+        private string m_strFileName;
 
         public BellListMgr(string fileName)
         {
@@ -41,6 +41,7 @@ namespace SchoolBellSystem
             FileInfo fileInfo = new FileInfo(m_strFileName);
             if (!fileInfo.Exists)
             {
+                Console.WriteLine("file not exists");
                 return;
             }
 
@@ -50,6 +51,7 @@ namespace SchoolBellSystem
             {
                 StreamReader streamReader = File.OpenText(m_strFileName);
                 m_BellArr = LitJson.JsonMapper.ToObject<BellArr>(streamReader.ReadToEnd());
+                streamReader.Close();
             }
             catch (System.Exception ex)
             {
@@ -57,10 +59,28 @@ namespace SchoolBellSystem
                 return;
             }
 
-            for (int i = 0, imax = (m_BellArr.m_arrBellList == null) ? 0 : m_BellArr.m_arrBellList.Length; i < imax; i++)
+            if (m_BellArr == null)
             {
-                m_listBell.Add(m_BellArr.m_arrBellList[i]);
+                m_BellArr = new BellArr();
             }
+
+            if (m_BellArr.m_arrBellList != null)
+            {
+                m_listBell.AddRange(m_BellArr.m_arrBellList);
+            }
+        }
+
+        /// <summary>
+        /// 排序
+        /// </summary>
+        public void Sort()
+        {
+            if (m_listBell.Count <= 0)
+            {
+                return;
+            }
+
+            m_listBell.Sort(Bell.CmpRingTimeASC);
         }
 
         /// <summary>
@@ -70,18 +90,21 @@ namespace SchoolBellSystem
         {
             try
             {
-                string jdata = LitJson.JsonMapper.ToJson(m_BellArr);
+                m_BellArr.m_arrBellList = m_listBell.ToArray();
 
+                string jdata = LitJson.JsonMapper.ToJson(m_BellArr);
+                
                 FileStream fileStream = new FileStream(m_strFileName, FileMode.Create);
                 StreamWriter streamWriter = new StreamWriter(fileStream);
 
                 streamWriter.Write(jdata);
 
                 streamWriter.Close();
+                fileStream.Close();
             }
             catch (System.Exception ex)
             {
-
+                Console.WriteLine("save data error: " + ex.ToString());
             }
         }
 
@@ -100,6 +123,21 @@ namespace SchoolBellSystem
                 }
             }
             return null;
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="bellID"></param>
+        public void DeleteBellByID(int bellID)
+        {
+            Bell bell = m_listBell.Find(x=>x.m_iBellID == bellID);
+            if(bell == null)
+            {
+                return;
+            }
+            m_listBell.Remove(bell);
+            SaveData();
         }
 
         /// <summary>
@@ -126,14 +164,32 @@ namespace SchoolBellSystem
         /// <returns></returns>
         public int GenerateID()
         {
-            if(m_listBell.Count <= 0)
+            int id = 0;
+            for(int i=0,imax=m_listBell.Count;i<imax;i++)
             {
-                return 1;
+                if (m_listBell[i].m_iBellID > id)
+                {
+                    id = m_listBell[i].m_iBellID;
+                }
             }
+            return id + 1;
+        }
 
-            m_listBell.Sort(Bell.CmpBellIDDESC);
+        /// <summary>
+        /// 尝试响铃
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        public Bell TryRingBell(DateTime time)
+        {
+            Bell ringBell = null;
 
-            return m_listBell[0].m_iBellID + 1;
+            string strTime = time.ToString("HH:mm:ss");
+            int week = (Convert.ToInt32(time.DayOfWeek) + 6) % 7;
+
+            ringBell = m_listBell.Find(x => (x.m_bClosed == false && strTime.Equals(x.m_strRingTime + ":00") && (x.m_strRingDay.Equals("0000000") || x.m_strRingDay[week] == '1') ));
+
+            return ringBell;
         }
 
         /// <summary>
@@ -144,14 +200,14 @@ namespace SchoolBellSystem
         {
             string data = @"
             {
-                ""bellList"" : [
+                ""m_arrBellList"" : [
                     {
-                        ""bellID"" : 1,
-                        ""bellName"" : ""lai""
+                        ""m_iBellID"" : 1,
+                        ""m_strBellName"" : ""lai""
                     },
                     {
-                        ""bellID"" : 2,
-                        ""bellName"" : ""jing""
+                        ""m_iBellID"" : 2,
+                        ""m_strBellName"" : ""jing""
                     }
                 ]
             }";

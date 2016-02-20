@@ -1,0 +1,1 @@
+{"m_arrBellList":[{"m_iBellID":1,"m_strBellName":"\u7B2C\u4E00\u4E2A\u65E9\u64CD\u524D\u7684\u996D","m_strSoundName":"s3.mp3","m_iBellVolume":100,"m_strRingTime":"04:56","m_strRingDay":"1111111","m_bClosed":false},{"m_iBellID":2,"m_strBellName":"eqwe","m_strSoundName":"s1.mp3","m_iBellVolume":100,"m_strRingTime":"05:00","m_strRingDay":"0000000","m_bClosed":true}]}

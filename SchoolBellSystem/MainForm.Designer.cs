@@ -38,8 +38,11 @@
             this.AddBell = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.LabelCurDateTime = new System.Windows.Forms.Label();
+            this.DGV = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.ContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AxWindowsMediaPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
             this.SuspendLayout();
             // 
             // ContextMenuStrip
@@ -85,12 +88,13 @@
             // 
             // AddBell
             // 
-            this.AddBell.Location = new System.Drawing.Point(50, 213);
+            this.AddBell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AddBell.Location = new System.Drawing.Point(614, 218);
             this.AddBell.Name = "AddBell";
             this.AddBell.Size = new System.Drawing.Size(40, 32);
-            this.AddBell.TabIndex = 2;
+            this.AddBell.TabIndex = 1;
             this.AddBell.Text = "+";
-            this.AddBell.UseVisualStyleBackColor = true;
+            this.AddBell.UseVisualStyleBackColor = false;
             this.AddBell.Click += new System.EventHandler(this.AddBell_Click);
             // 
             // Timer
@@ -102,17 +106,40 @@
             // LabelCurDateTime
             // 
             this.LabelCurDateTime.AutoSize = true;
-            this.LabelCurDateTime.Location = new System.Drawing.Point(54, 118);
+            this.LabelCurDateTime.ForeColor = System.Drawing.Color.Blue;
+            this.LabelCurDateTime.Location = new System.Drawing.Point(12, 228);
             this.LabelCurDateTime.Name = "LabelCurDateTime";
             this.LabelCurDateTime.Size = new System.Drawing.Size(71, 12);
             this.LabelCurDateTime.TabIndex = 4;
             this.LabelCurDateTime.Text = "CurDateTime";
             // 
+            // DGV
+            // 
+            this.DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV.EnableHeadersVisualStyles = false;
+            this.DGV.Location = new System.Drawing.Point(14, 25);
+            this.DGV.Name = "DGV";
+            this.DGV.RowTemplate.Height = 23;
+            this.DGV.Size = new System.Drawing.Size(640, 187);
+            this.DGV.TabIndex = 5;
+            this.DGV.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_RowHeaderMouseDoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 12);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "铃声列表(双击行头修改)：";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(670, 262);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DGV);
             this.Controls.Add(this.LabelCurDateTime);
             this.Controls.Add(this.AddBell);
             this.Controls.Add(this.AxWindowsMediaPlayer);
@@ -124,6 +151,7 @@
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.ContextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AxWindowsMediaPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +167,8 @@
         private System.Windows.Forms.Button AddBell;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Label LabelCurDateTime;
+        private System.Windows.Forms.DataGridView DGV;
+        private System.Windows.Forms.Label label1;
 
     }
 }
