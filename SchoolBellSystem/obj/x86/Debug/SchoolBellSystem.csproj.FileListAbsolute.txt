@@ -4,3 +4,5 @@ D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.Prope
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.csproj.GenerateResource.Cache
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.exe
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.pdb
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.csprojResolveAssemblyReference.cache
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.MainForm.resources
