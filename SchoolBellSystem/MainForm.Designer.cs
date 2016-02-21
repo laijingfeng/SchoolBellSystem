@@ -39,7 +39,8 @@
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.LabelCurDateTime = new System.Windows.Forms.Label();
             this.DGV = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ListTip = new System.Windows.Forms.Label();
+            this.EmptyTip = new System.Windows.Forms.Label();
             this.ContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AxWindowsMediaPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
@@ -124,21 +125,33 @@
             this.DGV.TabIndex = 5;
             this.DGV.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_RowHeaderMouseDoubleClick);
             // 
-            // label1
+            // ListTip
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 12);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "铃声列表(双击行头修改)：";
+            this.ListTip.AutoSize = true;
+            this.ListTip.Location = new System.Drawing.Point(14, 9);
+            this.ListTip.Name = "ListTip";
+            this.ListTip.Size = new System.Drawing.Size(149, 12);
+            this.ListTip.TabIndex = 6;
+            this.ListTip.Text = "铃声列表(双击行头修改)：";
+            // 
+            // EmptyTip
+            // 
+            this.EmptyTip.AutoSize = true;
+            this.EmptyTip.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.EmptyTip.ForeColor = System.Drawing.Color.Red;
+            this.EmptyTip.Location = new System.Drawing.Point(40, 103);
+            this.EmptyTip.Name = "EmptyTip";
+            this.EmptyTip.Size = new System.Drawing.Size(589, 20);
+            this.EmptyTip.TabIndex = 7;
+            this.EmptyTip.Text = "欢迎使用校园铃声系统，点击右下角的绿色按钮来创建第一个铃声";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 262);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EmptyTip);
+            this.Controls.Add(this.ListTip);
             this.Controls.Add(this.DGV);
             this.Controls.Add(this.LabelCurDateTime);
             this.Controls.Add(this.AddBell);
@@ -168,7 +181,8 @@
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Label LabelCurDateTime;
         private System.Windows.Forms.DataGridView DGV;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ListTip;
+        private System.Windows.Forms.Label EmptyTip;
 
     }
 }

@@ -1,1 +1,1 @@
-{"m_arrBellList":[{"m_iBellID":1,"m_strBellName":"\u6668\u8BFB\u4E0A\u8BFE","m_strSoundName":"s2.mp3","m_iBellVolume":100,"m_strRingTime":"07:00","m_strRingDay":"1111100","m_bClosed":false}]}
+{"m_arrBellList":[{"m_iBellID":1,"m_strBellName":"\u6668\u8BFB\u4E0A\u8BFE","m_strSoundName":"bell1.wav","m_iBellVolume":100,"m_strRingTime":"07:00","m_strRingDay":"1111100","m_bClosed":false}]}

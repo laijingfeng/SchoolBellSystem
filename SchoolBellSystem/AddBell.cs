@@ -25,6 +25,31 @@ namespace SchoolBellSystem
         }
 
         /// <summary>
+        /// 获取铃声名
+        /// </summary>
+        /// <returns></returns>
+        private string[] GetBellFile()
+        {
+            List<string> list = new List<string>();
+            string[] tmp = System.IO.Directory.GetFiles("Sound", "*.mp3");
+            list.AddRange(tmp);
+
+            tmp = System.IO.Directory.GetFiles("Sound", "*.wav");
+            list.AddRange(tmp);
+
+            tmp = System.IO.Directory.GetFiles("Sound", "*.wma");
+            list.AddRange(tmp);
+
+            tmp = System.IO.Directory.GetFiles("Sound", "*.midi");
+            list.AddRange(tmp);
+
+            tmp = System.IO.Directory.GetFiles("Sound", "*.mmf");
+            list.AddRange(tmp);
+
+            return list.ToArray();
+        }
+
+        /// <summary>
         /// 加载
         /// </summary>
         /// <param name="sender"></param>
@@ -32,7 +57,7 @@ namespace SchoolBellSystem
         private void AddBell_Load(object sender, EventArgs e)
         {
             Sound.Items.Clear();
-            string[] strSound = System.IO.Directory.GetFiles("Sound");
+            string[] strSound = GetBellFile();
             for (int i = 0, imax = strSound.Length; i < imax; i++)
             {
                 Sound.Items.Add(strSound[i].Substring(strSound[i].LastIndexOf('\\') + 1));
@@ -44,7 +69,10 @@ namespace SchoolBellSystem
                 Delete.Visible = false;
                 AddModify.Text = "增加";
 
-                Sound.SetSelected(0, true);
+                if (Sound.Items.Count > 0)
+                {
+                    Sound.SetSelected(0, true);
+                }
                 Useful.Checked = true;
             }
             else
@@ -59,13 +87,16 @@ namespace SchoolBellSystem
                 {
                     Volume.Value = oldBell.m_iBellVolume;
 
-                    int idx = Sound.Items.IndexOf(oldBell.m_strSoundName);
-                    if(idx < 0)
+                    if (Sound.Items.Count > 0)
                     {
-                        idx = 0;
+                        int idx = Sound.Items.IndexOf(oldBell.m_strSoundName);
+                        if (idx < 0)
+                        {
+                            idx = 0;
+                        }
+                        Sound.SetSelected(idx, true);
                     }
-                    Sound.SetSelected(idx,true);
-                    
+
                     string[] timeStr = oldBell.m_strRingTime.Split(':');
                     TimeM.Value = Convert.ToInt32(timeStr[0]);
                     TimeS.Value = Convert.ToInt32(timeStr[1]);
@@ -116,10 +147,24 @@ namespace SchoolBellSystem
             newBell = new Bell(id);
             newBell.m_bClosed = !Useful.Checked;
             newBell.m_iBellVolume = Convert.ToInt32(Volume.Value);
-            newBell.m_strSoundName = Sound.SelectedItem.ToString();
+            if (Sound.Items.Count > 0)
+            {
+                newBell.m_strSoundName = Sound.SelectedItem.ToString();
+            }
+            else
+            {
+                newBell.m_strSoundName = "未选铃声";
+            }
             newBell.m_strRingTime = Convert.ToInt32(TimeM.Value).ToString("D2") + ":" + Convert.ToInt32(TimeS.Value).ToString("D2");
-            newBell.m_strBellName = BellName.Text;
-            
+            if (string.IsNullOrEmpty(BellName.Text.Trim()) == false)
+            {
+                newBell.m_strBellName = BellName.Text.Trim();
+            }
+            else
+            {
+                newBell.m_strBellName = "未命名";
+            }
+
             newBell.m_strRingDay = "0000000";
             char[] ch = newBell.m_strRingDay.ToCharArray();
             for (int i = 0; i < Day.Items.Count; i++)
@@ -210,7 +255,7 @@ namespace SchoolBellSystem
         /// <param name="e"></param>
         private void Listen_Click(object sender, EventArgs e)
         {
-            if(Sound.SelectedItem == null)
+            if (Sound.SelectedItem == null)
             {
                 MessageBox.Show("请选中铃声试听");
                 return;
@@ -218,6 +263,16 @@ namespace SchoolBellSystem
 
             AxWindowsMediaPlayer.URL = "Sound/" + Sound.SelectedItem.ToString();
             AxWindowsMediaPlayer.settings.volume = Convert.ToInt32(Volume.Value);
+        }
+
+        /// <summary>
+        /// 打开Sound目录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OpenSound_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("Sound");
         }
     }
 }

@@ -50,6 +50,7 @@
             this.Useful = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.OpenSound = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TimeM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Volume)).BeginInit();
@@ -227,11 +228,11 @@
             // Listen
             // 
             this.Listen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Listen.Location = new System.Drawing.Point(36, 219);
+            this.Listen.Location = new System.Drawing.Point(12, 221);
             this.Listen.Name = "Listen";
-            this.Listen.Size = new System.Drawing.Size(47, 23);
+            this.Listen.Size = new System.Drawing.Size(71, 23);
             this.Listen.TabIndex = 6;
-            this.Listen.Text = "试听";
+            this.Listen.Text = "试听选中";
             this.Listen.UseVisualStyleBackColor = false;
             this.Listen.Click += new System.EventHandler(this.Listen_Click);
             // 
@@ -277,11 +278,23 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "铃声放安装目录的Sound文件夹";
             // 
+            // OpenSound
+            // 
+            this.OpenSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.OpenSound.Location = new System.Drawing.Point(12, 248);
+            this.OpenSound.Name = "OpenSound";
+            this.OpenSound.Size = new System.Drawing.Size(71, 23);
+            this.OpenSound.TabIndex = 23;
+            this.OpenSound.Text = "打开Sound";
+            this.OpenSound.UseVisualStyleBackColor = false;
+            this.OpenSound.Click += new System.EventHandler(this.OpenSound_Click);
+            // 
             // AddBell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(267, 387);
+            this.Controls.Add(this.OpenSound);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Useful);
@@ -341,5 +354,6 @@
         private System.Windows.Forms.CheckBox Useful;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button OpenSound;
     }
 }

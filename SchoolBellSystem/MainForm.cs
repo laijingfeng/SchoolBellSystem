@@ -10,13 +10,11 @@ using System.IO;
 
 namespace SchoolBellSystem
 {
+    /// <summary>
+    /// 主窗体
+    /// </summary>
     public partial class MainForm : Form
     {
-        /// <summary>
-        /// 星期
-        /// </summary>
-        public static string[] m_strWeekdays = { "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日" };
-
         /// <summary>
         /// 星期
         /// </summary>
@@ -39,17 +37,19 @@ namespace SchoolBellSystem
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (System.IO.Directory.Exists("Sound") == false)
+            {
+                System.IO.Directory.CreateDirectory("Sound");
+            }
+
             Timer.Interval = 1000;
             Timer.Enabled = true;
-            LabelCurDateTime.Text = DateTime.Now.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " " + m_strWeekdays[(Convert.ToInt32(DateTime.Now.DayOfWeek) + 6) % 7];
+            LabelCurDateTime.Text = DateTime.Now.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " 星期" + m_strWeekdaysShort[(Convert.ToInt32(DateTime.Now.DayOfWeek) + 6) % 7];
 
             AxWindowsMediaPlayer.Visible = false;
 
-            if (m_BellListMgr == null)
-            {
-                m_BellListMgr = new BellListMgr("Bell.txt");
-                m_BellListMgr.LoadData();
-            }
+            m_BellListMgr = new BellListMgr("Bell.txt");
+            m_BellListMgr.LoadData();
 
             RefreshBellUI();
 
@@ -157,8 +157,11 @@ namespace SchoolBellSystem
 
             RefreshBellUI();
 
-            AxWindowsMediaPlayer.URL = "Sound/" + bell.m_strSoundName;
-            AxWindowsMediaPlayer.settings.volume = bell.m_iBellVolume;
+            if (System.IO.File.Exists("Sound/" + bell.m_strSoundName))
+            {
+                AxWindowsMediaPlayer.URL = "Sound/" + bell.m_strSoundName;
+                AxWindowsMediaPlayer.settings.volume = bell.m_iBellVolume;
+            }
         }
 
         /// <summary>
@@ -170,7 +173,7 @@ namespace SchoolBellSystem
         {
             DateTime time = DateTime.Now;
 
-            LabelCurDateTime.Text = time.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " " + m_strWeekdays[(Convert.ToInt32(time.DayOfWeek) + 6) % 7];
+            LabelCurDateTime.Text = time.ToString("当前时间：yyyy-MM-dd HH:mm:ss") + " 星期" + m_strWeekdaysShort[(Convert.ToInt32(time.DayOfWeek) + 6) % 7];
 
             RingBell(m_BellListMgr.TryRingBell(time));
         }
@@ -204,6 +207,18 @@ namespace SchoolBellSystem
         /// </summary>
         private void RefreshBellUI()
         {
+            if(m_BellListMgr.m_listBell.Count <= 0)
+            {
+                EmptyTip.Visible = true;
+                DGV.Visible = false;
+                ListTip.Visible = false;
+                return;
+            }
+
+            EmptyTip.Visible = false;
+            DGV.Visible = true;
+            ListTip.Visible = true;
+
             m_BellListMgr.Sort();
 
             DGV.Columns.Clear();
