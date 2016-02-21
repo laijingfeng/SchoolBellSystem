@@ -25,9 +25,29 @@ namespace SchoolBellSystem
         /// </summary>
         public static BellListMgr m_BellListMgr = null;
 
+        /// <summary>
+        /// 单例
+        /// </summary>
+        private static MainForm m_instance = null;
+
+        /// <summary>
+        /// 单例
+        /// </summary>
+        public static MainForm Instance
+        {
+            get
+            {
+                return m_instance;
+            }
+        }
+
         public MainForm()
         {
             InitializeComponent();
+            if (m_instance == null)
+            {
+                m_instance = this;
+            }
         }
 
         /// <summary>
@@ -151,11 +171,8 @@ namespace SchoolBellSystem
             if (bell.m_strRingDay.Equals("0000000"))
             {
                 bell.m_bClosed = true;
+                m_BellListMgr.AddModifyBell(bell);
             }
-
-            m_BellListMgr.AddModifyBell(bell);
-
-            RefreshBellUI();
 
             if (System.IO.File.Exists("Sound/" + bell.m_strSoundName))
             {
@@ -199,13 +216,12 @@ namespace SchoolBellSystem
             addBell.modifyID = tModifyID;
             addBell.ShowDialog();
             this.Show();
-            RefreshBellUI();
         }
 
         /// <summary>
         /// 刷新UI
         /// </summary>
-        private void RefreshBellUI()
+        public void RefreshBellUI()
         {
             if(m_BellListMgr.m_listBell.Count <= 0)
             {

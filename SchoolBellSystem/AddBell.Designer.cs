@@ -51,6 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.OpenSound = new System.Windows.Forms.Button();
+            this.StopPlay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TimeM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Volume)).BeginInit();
@@ -280,8 +281,8 @@
             // 
             // OpenSound
             // 
-            this.OpenSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.OpenSound.Location = new System.Drawing.Point(12, 248);
+            this.OpenSound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.OpenSound.Location = new System.Drawing.Point(12, 273);
             this.OpenSound.Name = "OpenSound";
             this.OpenSound.Size = new System.Drawing.Size(71, 23);
             this.OpenSound.TabIndex = 23;
@@ -289,11 +290,23 @@
             this.OpenSound.UseVisualStyleBackColor = false;
             this.OpenSound.Click += new System.EventHandler(this.OpenSound_Click);
             // 
+            // StopPlay
+            // 
+            this.StopPlay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.StopPlay.Location = new System.Drawing.Point(12, 248);
+            this.StopPlay.Name = "StopPlay";
+            this.StopPlay.Size = new System.Drawing.Size(71, 23);
+            this.StopPlay.TabIndex = 24;
+            this.StopPlay.Text = "停止播放";
+            this.StopPlay.UseVisualStyleBackColor = false;
+            this.StopPlay.Click += new System.EventHandler(this.StopPlay_Click);
+            // 
             // AddBell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(267, 387);
+            this.Controls.Add(this.StopPlay);
             this.Controls.Add(this.OpenSound);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -355,5 +368,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button OpenSound;
+        private System.Windows.Forms.Button StopPlay;
     }
 }

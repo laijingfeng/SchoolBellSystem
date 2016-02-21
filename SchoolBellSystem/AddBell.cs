@@ -274,5 +274,15 @@ namespace SchoolBellSystem
         {
             System.Diagnostics.Process.Start("Sound");
         }
+
+        /// <summary>
+        /// 停止播放
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StopPlay_Click(object sender, EventArgs e)
+        {
+            AxWindowsMediaPlayer.Ctlcontrols.stop();
+        }
     }
 }

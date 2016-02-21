@@ -88,6 +88,8 @@ namespace SchoolBellSystem
         /// </summary>
         public void SaveData()
         {
+            MainForm.Instance.RefreshBellUI();
+
             try
             {
                 m_BellArr.m_arrBellList = m_listBell.ToArray();

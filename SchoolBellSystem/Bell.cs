@@ -109,6 +109,13 @@ namespace SchoolBellSystem
         /// <returns></returns>
         public static int CmpRingTimeASC(Bell a, Bell b)
         {
+            //list有两个一样的时候，会出现a为null
+            if (a == null
+                || b == null)
+            {
+                return 0;
+            }
+
             int iRet = 0;
             iRet = a.m_strRingTime.CompareTo(b.m_strRingTime) <= 0 ? -1 : 1;
             return iRet;

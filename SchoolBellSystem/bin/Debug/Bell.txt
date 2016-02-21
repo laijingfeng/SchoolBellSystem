@@ -1,1 +1,1 @@
-{"m_arrBellList":[]}
+{"m_arrBellList":[{"m_iBellID":1,"m_strBellName":"\u672A\u547D\u540D","m_strSoundName":"bell1.wav","m_iBellVolume":100,"m_strRingTime":"00:00","m_strRingDay":"0000000","m_bClosed":false},{"m_iBellID":2,"m_strBellName":"\u672A\u547D\u540D","m_strSoundName":"bell1.wav","m_iBellVolume":100,"m_strRingTime":"00:00","m_strRingDay":"0000000","m_bClosed":false},{"m_iBellID":3,"m_strBellName":"\u672A\u547D\u540D","m_strSoundName":"bell1.wav","m_iBellVolume":100,"m_strRingTime":"00:00","m_strRingDay":"0000000","m_bClosed":false}]}
