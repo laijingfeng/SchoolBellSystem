@@ -52,25 +52,25 @@
         "Entry"
         {
         "MsmKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
-        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
         "OwnerKey" = "8:_FE6B2B402047F026050E35808B3A8C4B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EAA97B29B7C8EDB897C0E49104CA78AE"
-        "OwnerKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
+        "MsmKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
+        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_EAA97B29B7C8EDB897C0E49104CA78AE"
         "OwnerKey" = "8:_1136BAC6E7FC4DA1AC948AB7A9820432"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EAA97B29B7C8EDB897C0E49104CA78AE"
+        "OwnerKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,31 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3BCC025D5BB19410998B0424E09F8E48"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FE6B2B402047F026050E35808B3A8C4B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_497BFDEB917743F5BF13014719F5B128"
+        "OwnerKey" = "8:_1C5C8EE7824E44EFB358878D6DB4069B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -124,7 +100,31 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1C5C8EE7824E44EFB358878D6DB4069B"
+        "OwnerKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_497BFDEB917743F5BF13014719F5B128"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FE6B2B402047F026050E35808B3A8C4B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3BCC025D5BB19410998B0424E09F8E48"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -301,11 +301,6 @@
             "AssemblyAsmDisplayName" = "8:LitJson, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3BCC025D5BB19410998B0424E09F8E48"
-                    {
-                    "Name" = "8:LitJson.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:LitJson.DLL"
             "TargetName" = "8:"
@@ -394,11 +389,6 @@
             "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_E940F4834DCA257C2415F270E2F3BD86"
-                    {
-                    "Name" = "8:Interop.WMPLib.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Interop.WMPLib.DLL"
             "TargetName" = "8:"
@@ -445,11 +435,6 @@
             "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_FE6B2B402047F026050E35808B3A8C4B"
-                    {
-                    "Name" = "8:AxInterop.WMPLib.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:AxInterop.WMPLib.DLL"
             "TargetName" = "8:"
@@ -552,16 +537,16 @@
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:默认公司名称"
+        "Manufacturer" = "8:赖敬峰"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:校园铃声系统"
         "Subject" = "8:"
         "ARPCONTACT" = "8:赖敬峰"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:"
+        "ARPCOMMENTS" = "8:校园铃声系统"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
@@ -623,13 +608,63 @@
                         {
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_67479282BBD94B14A94551291CABAD26"
                             {
-                            "Name" = "8:[Manufacturer]"
+                            "Name" = "8:Microsoft"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:FALSE"
                             "Transitive" = "11:FALSE"
                                 "Keys"
                                 {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_20E7806947A9465D8568E15313479DBB"
+                                    {
+                                    "Name" = "8:Windows"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_07DE1B8D699841F697C8E89217CCE169"
+                                            {
+                                            "Name" = "8:CurrentVersion"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_9885B8EB022B4C4EA371DC9CE44CE536"
+                                                    {
+                                                    "Name" = "8:Run"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                        }
+                                                        "Values"
+                                                        {
+                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_8C6B9A073CED491EAC754A2CFDAF1838"
+                                                            {
+                                                            "Name" = "8:SchoolBellSystem"
+                                                            "Condition" = "8:"
+                                                            "Transitive" = "11:FALSE"
+                                                            "ValueTypes" = "3:2"
+                                                            "Value" = "8:[TARGETDIR]SchoolBellSystem.exe"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
                                 }
                                 "Values"
                                 {
