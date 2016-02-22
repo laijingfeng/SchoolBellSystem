@@ -15,68 +15,86 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1F0385E40E3841F685E163F278956B7A"
+        "MsmKey" = "8:_1136BAC6E7FC4DA1AC948AB7A9820432"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_38BC0F46D41A4239BB331B851471C5D6"
+        "MsmKey" = "8:_1C5C8EE7824E44EFB358878D6DB4069B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3BCC025D5BB19410998B0424E09F8E48"
-        "OwnerKey" = "8:_38BC0F46D41A4239BB331B851471C5D6"
+        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6DF5C83FB2CF4946BD92A960553336BD"
+        "MsmKey" = "8:_497BFDEB917743F5BF13014719F5B128"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_8A992270798540068EA8FC453F01EDD5"
+        "MsmKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_951FF22D94F64F928A391D1CFF8BB981"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
+        "OwnerKey" = "8:_1C5C8EE7824E44EFB358878D6DB4069B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F5FDDD69F972466D90D2033DFE67AB31"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
+        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
+        "OwnerKey" = "8:_FE6B2B402047F026050E35808B3A8C4B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EAA97B29B7C8EDB897C0E49104CA78AE"
+        "OwnerKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EAA97B29B7C8EDB897C0E49104CA78AE"
+        "OwnerKey" = "8:_1136BAC6E7FC4DA1AC948AB7A9820432"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_FE6B2B402047F026050E35808B3A8C4B"
-        "OwnerKey" = "8:_38BC0F46D41A4239BB331B851471C5D6"
+        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FF078A8A81FF46EEBA1E6DE4DEAD9BF6"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_951FF22D94F64F928A391D1CFF8BB981"
+        "OwnerKey" = "8:_E940F4834DCA257C2415F270E2F3BD86"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_951FF22D94F64F928A391D1CFF8BB981"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_38BC0F46D41A4239BB331B851471C5D6"
+        "OwnerKey" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -94,31 +112,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FE6B2B402047F026050E35808B3A8C4B"
+        "OwnerKey" = "8:_497BFDEB917743F5BF13014719F5B128"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F5FDDD69F972466D90D2033DFE67AB31"
+        "OwnerKey" = "8:_1136BAC6E7FC4DA1AC948AB7A9820432"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F5FDDD69F972466D90D2033DFE67AB31"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6DF5C83FB2CF4946BD92A960553336BD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_38BC0F46D41A4239BB331B851471C5D6"
+        "OwnerKey" = "8:_1C5C8EE7824E44EFB358878D6DB4069B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -146,6 +152,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
         "Release"
@@ -213,10 +232,21 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1F0385E40E3841F685E163F278956B7A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1136BAC6E7FC4DA1AC948AB7A9820432"
             {
-            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
-            "TargetName" = "8:卸载.exe"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_1136BAC6E7FC4DA1AC948AB7A9820432"
+                    {
+                    "Name" = "8:Interop.WMPLib.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\SchoolBellSystem\\bin\\Release\\Interop.WMPLib.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
             "Condition" = "8:"
@@ -233,20 +263,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_38BC0F46D41A4239BB331B851471C5D6"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1C5C8EE7824E44EFB358878D6DB4069B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SchoolBellSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_38BC0F46D41A4239BB331B851471C5D6"
+                    "_1C5C8EE7824E44EFB358878D6DB4069B"
                     {
-                    "Name" = "8:SchoolBellSystem.exe"
+                    "Name" = "8:AxInterop.WMPLib.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\SchoolBellSystem\\bin\\Release\\SchoolBellSystem.exe"
+            "SourcePath" = "8:..\\SchoolBellSystem\\bin\\Release\\AxInterop.WMPLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
@@ -295,14 +325,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6DF5C83FB2CF4946BD92A960553336BD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_497BFDEB917743F5BF13014719F5B128"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:LitJson, Version=0.7.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6DF5C83FB2CF4946BD92A960553336BD"
+                    "_497BFDEB917743F5BF13014719F5B128"
                     {
                     "Name" = "8:LitJson.dll"
                     "Attributes" = "3:512"
@@ -326,10 +356,21 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8A992270798540068EA8FC453F01EDD5"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
             {
-            "SourcePath" = "8:..\\SchoolBellSystem\\32.ico"
-            "TargetName" = "8:32.ico"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:SchoolBellSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_CFB65D0FC17946ADADBFDCF1D04DD7D6"
+                    {
+                    "Name" = "8:SchoolBellSystem.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\SchoolBellSystem\\bin\\Release\\SchoolBellSystem.exe"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
             "Condition" = "8:"
@@ -346,20 +387,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_951FF22D94F64F928A391D1CFF8BB981"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E940F4834DCA257C2415F270E2F3BD86"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
-                    "_951FF22D94F64F928A391D1CFF8BB981"
+                    "_E940F4834DCA257C2415F270E2F3BD86"
                     {
-                    "Name" = "8:Interop.WMPLib.dll"
+                    "Name" = "8:Interop.WMPLib.DLL"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:..\\SchoolBellSystem\\bin\\Release\\Interop.WMPLib.dll"
+            "SourcePath" = "8:Interop.WMPLib.DLL"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
@@ -374,24 +415,13 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F5FDDD69F972466D90D2033DFE67AB31"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EAA97B29B7C8EDB897C0E49104CA78AE"
             {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F5FDDD69F972466D90D2033DFE67AB31"
-                    {
-                    "Name" = "8:AxInterop.WMPLib.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\SchoolBellSystem\\bin\\Release\\AxInterop.WMPLib.dll"
-            "TargetName" = "8:"
+            "SourcePath" = "8:wmp.dll"
+            "TargetName" = "8:wmp.dll"
             "Tag" = "8:"
             "Folder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
             "Condition" = "8:"
@@ -405,7 +435,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FE6B2B402047F026050E35808B3A8C4B"
@@ -439,6 +469,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FF078A8A81FF46EEBA1E6DE4DEAD9BF6"
+            {
+            "SourcePath" = "8:..\\SchoolBellSystem\\32.ico"
+            "TargetName" = "8:32.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -466,17 +516,6 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_AABDE959A309486EBE4B98A84426C460"
-                    {
-                    "Name" = "8:校园铃声系统"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_B24B7AE9E22248DB98DA2129D41FA0E2"
-                        "Folders"
-                        {
-                        }
-                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_F767FEE586C34CDFA105D6B762F52EFF"
@@ -627,7 +666,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_31DD00E19D0E471C823EEB7AA5C22ADF"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2E1E3D3A19954CB682A9ED2EB04A9B3D"
             {
             "Name" = "8:校园铃声系统"
             "Arguments" = "8:"
@@ -635,13 +674,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_38BC0F46D41A4239BB331B851471C5D6"
+            "Target" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
             "Folder" = "8:_F767FEE586C34CDFA105D6B762F52EFF"
             "WorkingFolder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
-            "Icon" = "8:_8A992270798540068EA8FC453F01EDD5"
+            "Icon" = "8:_FF078A8A81FF46EEBA1E6DE4DEAD9BF6"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_994DB84290774A11A0A8E1A11B3399A8"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_436B69C3872F4C9BAA61AAC07EF4B984"
             {
             "Name" = "8:校园铃声系统"
             "Arguments" = "8:"
@@ -649,24 +688,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_38BC0F46D41A4239BB331B851471C5D6"
-            "Folder" = "8:_AABDE959A309486EBE4B98A84426C460"
+            "Target" = "8:_CFB65D0FC17946ADADBFDCF1D04DD7D6"
+            "Folder" = "8:_7A96EC7931994E0F8FA883C82DB4ACAC"
             "WorkingFolder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
-            "Icon" = "8:_8A992270798540068EA8FC453F01EDD5"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F41F55C58EEE4269B320D848F1163FD8"
-            {
-            "Name" = "8:卸载"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_1F0385E40E3841F685E163F278956B7A"
-            "Folder" = "8:_AABDE959A309486EBE4B98A84426C460"
-            "WorkingFolder" = "8:_34351A19553D4E6E8E3D0008A190CA85"
-            "Icon" = "8:"
+            "Icon" = "8:_FF078A8A81FF46EEBA1E6DE4DEAD9BF6"
             "Feature" = "8:"
             }
         }
