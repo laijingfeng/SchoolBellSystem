@@ -334,6 +334,7 @@
             this.MinimizeBox = false;
             this.Name = "AddBell";
             this.Text = "增/改铃声";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddBell_FormClosing);
             this.Load += new System.EventHandler(this.AddBell_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TimeM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeS)).EndInit();

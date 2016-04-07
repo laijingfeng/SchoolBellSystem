@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.IO;
 
@@ -55,7 +54,7 @@ namespace SchoolBellSystem
             }
             catch (System.Exception ex)
             {
-                Console.WriteLine("error");
+                Console.WriteLine("error " + ex);
                 return;
             }
 

@@ -12,4 +12,4 @@ D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.Pro
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.csproj.GenerateResource.Cache
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.exe
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.pdb
-D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Release\SchoolBellSystem.csprojResolveAssemblyReference.cache
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Release\SchoolBellSystem.exe.config

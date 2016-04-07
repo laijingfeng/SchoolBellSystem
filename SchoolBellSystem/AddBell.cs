@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -283,6 +282,16 @@ namespace SchoolBellSystem
         private void StopPlay_Click(object sender, EventArgs e)
         {
             AxWindowsMediaPlayer.Ctlcontrols.stop();
+        }
+
+        /// <summary>
+        /// 窗体关闭时
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddBell_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StopPlay_Click(null, null);
         }
     }
 }
