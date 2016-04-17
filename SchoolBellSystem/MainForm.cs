@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.Win32;
 
 namespace SchoolBellSystem
 {
@@ -14,6 +15,16 @@ namespace SchoolBellSystem
     /// </summary>
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Sound文件夹路径
+        /// </summary>
+        public static string m_strSoundPath = Application.StartupPath + "\\Sound\\";
+
+        /// <summary>
+        /// 数据路径
+        /// </summary>
+        private string m_strDataPath = Application.StartupPath + "\\BellData";
+
         /// <summary>
         /// 星期
         /// </summary>
@@ -56,10 +67,12 @@ namespace SchoolBellSystem
         /// <param name="e"></param>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (System.IO.Directory.Exists("Sound") == false)
+            if (System.IO.Directory.Exists(m_strSoundPath) == false)
             {
-                System.IO.Directory.CreateDirectory("Sound");
+                System.IO.Directory.CreateDirectory(m_strSoundPath);
             }
+
+            StartAutoRun.Checked = IsAutoRun();
 
             Timer.Interval = 1000;
             Timer.Enabled = true;
@@ -67,7 +80,7 @@ namespace SchoolBellSystem
 
             AxWindowsMediaPlayer.Visible = false;
 
-            m_BellListMgr = new BellListMgr("Bell.txt");
+            m_BellListMgr = new BellListMgr(m_strDataPath);
             m_BellListMgr.LoadData();
 
             RefreshBellUI();
@@ -173,9 +186,9 @@ namespace SchoolBellSystem
                 m_BellListMgr.AddModifyBell(bell);
             }
 
-            if (System.IO.File.Exists("Sound/" + bell.m_strSoundName))
+            if (System.IO.File.Exists(m_strSoundPath + bell.m_strSoundName))
             {
-                AxWindowsMediaPlayer.URL = "Sound/" + bell.m_strSoundName;
+                AxWindowsMediaPlayer.URL = m_strSoundPath + bell.m_strSoundName;
                 AxWindowsMediaPlayer.settings.volume = bell.m_iBellVolume;
             }
         }
@@ -201,7 +214,58 @@ namespace SchoolBellSystem
         /// <param name="e"></param>
         private void AddBell_Click(object sender, EventArgs e)
         {
+            string path = Application.ExecutablePath;
+            RegistryKey rk = Registry.LocalMachine;
+            RegistryKey rk2 = rk.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run");
+            rk2.GetValue("SchoolBellSystem","NoValue");
+            rk2.SetValue("SchoolBellSystem", path);
+            rk2.DeleteSubKey("SchoolBellSystem", false);
+            rk2.Close();
+            rk.Close();
+
             DoAddModifyBell();
+        }
+
+        private bool IsAutoRun()
+        {
+            bool ret = false;
+            string path = Application.ExecutablePath;
+            RegistryKey rk = Registry.LocalMachine;
+            RegistryKey rk2 = rk.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run");
+            string str = (string)rk2.GetValue("SchoolBellSystem", "NoValue");
+            if (str.Equals(path))
+            {
+                ret = true;
+            }
+            else
+            {
+                ret = false;
+                if (str.Equals("NoValue") == false)//其他的删除
+                {
+                    rk2.DeleteValue("SchoolBellSystem", false);
+                }
+            }
+            rk2.Close();
+            rk.Close();
+            return ret;
+        }
+
+        private void SetAutoRun(bool autoRun)
+        {
+            string path = Application.ExecutablePath;
+            RegistryKey rk = Registry.LocalMachine;
+            RegistryKey rk2 = rk.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run");
+            if (autoRun)
+            {
+                rk2.SetValue("SchoolBellSystem", path);
+            }
+            else
+            {
+                rk2.DeleteValue("SchoolBellSystem", false);
+            }
+            
+            rk2.Close();
+            rk.Close();
         }
 
         /// <summary>
@@ -238,11 +302,11 @@ namespace SchoolBellSystem
 
             DGV.Columns.Clear();
             DGV.Columns.Add("BellName", "名称"); DGV.Columns[0].Width = 140;
-            DGV.Columns.Add("RingTime", "时间"); DGV.Columns[1].Width = 55;
+            DGV.Columns.Add("RingTime", "时间"); DGV.Columns[1].Width = 60;
             DGV.Columns.Add("RingDay", "重复"); DGV.Columns[2].Width = 140;
-            DGV.Columns.Add("SoundName", "铃声");
-            DGV.Columns.Add("Volume", "音量"); DGV.Columns[4].Width = 35;
-            DGV.Columns.Add("State", "状态"); DGV.Columns[5].Width = 55;
+            DGV.Columns.Add("SoundName", "铃声"); DGV.Columns[3].Width = 140;
+            DGV.Columns.Add("Volume", "音量"); DGV.Columns[4].Width = 40;
+            DGV.Columns.Add("State", "状态"); DGV.Columns[5].Width = 60;
 
             if (m_BellListMgr.m_listBell.Count <= 0)
             {
@@ -365,5 +429,10 @@ namespace SchoolBellSystem
         }
 
         #endregion
+
+        private void StartAutoRun_CheckedChanged(object sender, EventArgs e)
+        {
+            SetAutoRun(StartAutoRun.Checked);
+        }
     }
 }

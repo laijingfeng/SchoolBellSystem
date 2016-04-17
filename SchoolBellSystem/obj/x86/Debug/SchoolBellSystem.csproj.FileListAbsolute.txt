@@ -4,6 +4,7 @@ D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Debug\SchoolBellSystem.pdb
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Debug\LitJson.dll
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Debug\Interop.WMPLib.dll
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\bin\Debug\AxInterop.WMPLib.dll
+D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.csprojResolveAssemblyReference.cache
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\Interop.WMPLib.dll
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\AxInterop.WMPLib.dll
 D:\GitHub\SchoolBellSystem\SchoolBellSystem\obj\x86\Debug\SchoolBellSystem.csproj.ResolveComReference.cache

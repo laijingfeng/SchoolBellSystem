@@ -34,16 +34,17 @@
             this.MenuItem_Show = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItem_Eixt = new System.Windows.Forms.ToolStripMenuItem();
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.AxWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.AddBell = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.LabelCurDateTime = new System.Windows.Forms.Label();
             this.DGV = new System.Windows.Forms.DataGridView();
             this.ListTip = new System.Windows.Forms.Label();
             this.EmptyTip = new System.Windows.Forms.Label();
+            this.StartAutoRun = new System.Windows.Forms.CheckBox();
+            this.AxWindowsMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.ContextMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AxWindowsMediaPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AxWindowsMediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // ContextMenuStrip
@@ -77,20 +78,10 @@
             this.NotifyIcon.Visible = true;
             this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
             // 
-            // AxWindowsMediaPlayer
-            // 
-            this.AxWindowsMediaPlayer.Enabled = true;
-            this.AxWindowsMediaPlayer.Location = new System.Drawing.Point(-2, 0);
-            this.AxWindowsMediaPlayer.Name = "AxWindowsMediaPlayer";
-            this.AxWindowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AxWindowsMediaPlayer.OcxState")));
-            this.AxWindowsMediaPlayer.Size = new System.Drawing.Size(10, 10);
-            this.AxWindowsMediaPlayer.TabIndex = 1;
-            this.AxWindowsMediaPlayer.Visible = false;
-            // 
             // AddBell
             // 
             this.AddBell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.AddBell.Location = new System.Drawing.Point(614, 218);
+            this.AddBell.Location = new System.Drawing.Point(615, 308);
             this.AddBell.Name = "AddBell";
             this.AddBell.Size = new System.Drawing.Size(40, 32);
             this.AddBell.TabIndex = 1;
@@ -108,7 +99,7 @@
             // 
             this.LabelCurDateTime.AutoSize = true;
             this.LabelCurDateTime.ForeColor = System.Drawing.Color.Blue;
-            this.LabelCurDateTime.Location = new System.Drawing.Point(12, 228);
+            this.LabelCurDateTime.Location = new System.Drawing.Point(13, 318);
             this.LabelCurDateTime.Name = "LabelCurDateTime";
             this.LabelCurDateTime.Size = new System.Drawing.Size(71, 12);
             this.LabelCurDateTime.TabIndex = 4;
@@ -121,7 +112,7 @@
             this.DGV.Location = new System.Drawing.Point(14, 25);
             this.DGV.Name = "DGV";
             this.DGV.RowTemplate.Height = 23;
-            this.DGV.Size = new System.Drawing.Size(640, 187);
+            this.DGV.Size = new System.Drawing.Size(640, 273);
             this.DGV.TabIndex = 5;
             this.DGV.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DGV_RowHeaderMouseDoubleClick);
             // 
@@ -139,17 +130,39 @@
             this.EmptyTip.AutoSize = true;
             this.EmptyTip.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.EmptyTip.ForeColor = System.Drawing.Color.Red;
-            this.EmptyTip.Location = new System.Drawing.Point(40, 103);
+            this.EmptyTip.Location = new System.Drawing.Point(37, 150);
             this.EmptyTip.Name = "EmptyTip";
             this.EmptyTip.Size = new System.Drawing.Size(589, 20);
             this.EmptyTip.TabIndex = 7;
             this.EmptyTip.Text = "欢迎使用校园铃声系统，点击右下角的绿色按钮来创建第一个铃声";
             // 
+            // StartAutoRun
+            // 
+            this.StartAutoRun.AutoSize = true;
+            this.StartAutoRun.Location = new System.Drawing.Point(513, 317);
+            this.StartAutoRun.Name = "StartAutoRun";
+            this.StartAutoRun.Size = new System.Drawing.Size(96, 16);
+            this.StartAutoRun.TabIndex = 9;
+            this.StartAutoRun.Text = "开机自动运行";
+            this.StartAutoRun.UseVisualStyleBackColor = true;
+            this.StartAutoRun.CheckedChanged += new System.EventHandler(this.StartAutoRun_CheckedChanged);
+            // 
+            // AxWindowsMediaPlayer
+            // 
+            this.AxWindowsMediaPlayer.Enabled = true;
+            this.AxWindowsMediaPlayer.Location = new System.Drawing.Point(-2, 0);
+            this.AxWindowsMediaPlayer.Name = "AxWindowsMediaPlayer";
+            this.AxWindowsMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AxWindowsMediaPlayer.OcxState")));
+            this.AxWindowsMediaPlayer.Size = new System.Drawing.Size(10, 10);
+            this.AxWindowsMediaPlayer.TabIndex = 1;
+            this.AxWindowsMediaPlayer.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 262);
+            this.ClientSize = new System.Drawing.Size(670, 348);
+            this.Controls.Add(this.StartAutoRun);
             this.Controls.Add(this.EmptyTip);
             this.Controls.Add(this.ListTip);
             this.Controls.Add(this.DGV);
@@ -163,8 +176,8 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             this.ContextMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AxWindowsMediaPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AxWindowsMediaPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,6 +196,7 @@
         private System.Windows.Forms.DataGridView DGV;
         private System.Windows.Forms.Label ListTip;
         private System.Windows.Forms.Label EmptyTip;
+        private System.Windows.Forms.CheckBox StartAutoRun;
 
     }
 }

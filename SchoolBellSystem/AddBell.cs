@@ -30,19 +30,19 @@ namespace SchoolBellSystem
         private string[] GetBellFile()
         {
             List<string> list = new List<string>();
-            string[] tmp = System.IO.Directory.GetFiles("Sound", "*.mp3");
+            string[] tmp = System.IO.Directory.GetFiles(MainForm.m_strSoundPath, "*.mp3");
             list.AddRange(tmp);
 
-            tmp = System.IO.Directory.GetFiles("Sound", "*.wav");
+            tmp = System.IO.Directory.GetFiles(MainForm.m_strSoundPath, "*.wav");
             list.AddRange(tmp);
 
-            tmp = System.IO.Directory.GetFiles("Sound", "*.wma");
+            tmp = System.IO.Directory.GetFiles(MainForm.m_strSoundPath, "*.wma");
             list.AddRange(tmp);
 
-            tmp = System.IO.Directory.GetFiles("Sound", "*.midi");
+            tmp = System.IO.Directory.GetFiles(MainForm.m_strSoundPath, "*.midi");
             list.AddRange(tmp);
 
-            tmp = System.IO.Directory.GetFiles("Sound", "*.mmf");
+            tmp = System.IO.Directory.GetFiles(MainForm.m_strSoundPath, "*.mmf");
             list.AddRange(tmp);
 
             return list.ToArray();
@@ -260,7 +260,7 @@ namespace SchoolBellSystem
                 return;
             }
 
-            AxWindowsMediaPlayer.URL = "Sound/" + Sound.SelectedItem.ToString();
+            AxWindowsMediaPlayer.URL = MainForm.m_strSoundPath + Sound.SelectedItem.ToString();
             AxWindowsMediaPlayer.settings.volume = Convert.ToInt32(Volume.Value);
         }
 
@@ -271,7 +271,7 @@ namespace SchoolBellSystem
         /// <param name="e"></param>
         private void OpenSound_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("Sound");
+            System.Diagnostics.Process.Start(MainForm.m_strSoundPath);
         }
 
         /// <summary>

@@ -108,7 +108,10 @@ namespace SchoolBellSystem
         /// <returns></returns>
         public static int CmpRingTimeASC(Bell a, Bell b)
         {
-            //list有两个一样的时候，会出现a为null
+            if (a.Equals(b)){
+                return 0;
+            }
+
             if (a == null
                 || b == null)
             {
